@@ -1,0 +1,142 @@
+	Create table emp_al (fname varchar(15), lname varchar(10), ssn varchar(11), bdate date, address varchar(20), sex char(1), salary number(10), hiredate date, position varchar(15));
+	
+	
+
+	
+	Create table emp_al (fname varchar(15), lname varchar(10), 
+	ssn varchar(11), bdate date, address varchar(20), sex char(1), salary number(10),
+	 hiredate date, position varchar(15));
+	
+	
+	desc emp_al;
+	-- how to insert data in the database ?
+	-- Formula 
+	-- INSERT INTO TABLE_NAME (column1, column2, column3,...columnN) 
+	    VALUES (value1, value2, value3,...valueN);
+	
+	--ex: 
+	    insert into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('alamgir','hossain','001-23-4321','26-may-2023','2201 coperway','M',175000,'23-mar-2019','president');
+	
+	 -- how display data / how to find data in the table
+	-- Select* Statement uses to select all data from single or multiple tables in the database 
+	--formula
+	-- select * from table_name;
+	-- ex:
+	 select *from emp_al;
+	
+	-- insert new row the able 
+	
+	
+	insert into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('alhan','hossain','901-23-5678','26-may-2018',' 23sprint st','M',5000,'23-mar-2017','developer');
+	
+	-- how select specific  value in the table of databae
+	-- Ans---- Select stamement uses for specific  value in the table of databae
+	-- ex
+	Select fname, lname, sex from emp_al 
+	
+	-- difference between select* and select 
+	
+	
+	-- How to insert multiple rows 
+	-- insert all keyward uses to insert multiple rows
+	ex:
+	
+	insert all
+	into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('aleeza','hossain','801-23-5671','20-jun-2017',' 24 print st','M',5000,'19-dec-2016','analyst')
+	 into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('atif','Mua','201-23-5655','29-may-1990',' 24 washington','M',75000,'05-may-2019',' sr.developer')
+	into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('beza','m','201-23-5678','26-may-2020',' 2carway st','F',5000,'07-mar-2017','lead')
+	 into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('beth','alem','901-23-7838','26-may-2018',' sprint st','M',115000,'23-mar-2017','president')
+	
+	select * from dual;
+	
+	
+	
+select * from emp_al 
+
+ insert into emp_al ( fname,lname,ssn,bdate,address,sex,salary, hiredate,position ) 
+	    values ('beth','alem','901-23-7838','26-may-2018',' sprint st','M',115000,'23-mar-2017','president')
+
+--How to select all data from a  table 
+select *
+ --How to select specific data  element from a  table 
+Select column_name
+-- how disply unique data / how to display data without duplicate 
+Select distinct uses to display data without duplicate 
+ex:
+select distinct Fname from emp_al 
+select Fname from emp_al 
+
+-- what is the difference between select and select distinct 
+--select will display all value including duplicate .. on the other hand select distinct will display on unique value 
+
+
+-how to slice and dice data for data amalysis 
+
+    World 
+        - continent 
+                - countires
+                      - Region 
+                            - State 
+                                 - County 
+                                       - city 
+                                            - street
+
+Slice data for time 
+
+year 
+    - Quarter 
+          - Month 
+                - Weeks
+                      -Days
+                        - hrs 
+                           - Minute 
+                               - Second 
+
+
+
+Sales  50 M
+     Sales by state 
+             VA= 4    ( 5)
+              MD = 3   () 5 
+                 store1 Rockvile ( highest )
+                store2   gaithersbug   ( avg))
+                Store3 silver sprint   ( lowest sales )
+    
+              Dc= 1
+
+   
+
+-- Slice data based condition 
+ ex: what is your total sales
+             total sales by state 
+                 total sales by state and by quarter 
+
+for condition we use where keyword 
+ How to display data using where condition
+    Formula
+Select  columns_name
+from   table_name 
+Where  condition 
+ex: 
+
+
+desc emp_al 
+
+
+select *
+from emp_al 
+where sex='F'
+
+find employee Fname, SSN, Address who is making more than 50000
+
+-- we use =, >, <, <>, >=, <= sign to display data on conditions 
+
+select*
+from emp_al 
+where salary  <= 75000
